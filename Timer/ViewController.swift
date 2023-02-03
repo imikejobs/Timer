@@ -65,9 +65,16 @@ class ViewController: NSViewController {
         if timer == nil {
             startButton.title = "Pause"
             timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (Timer) in
-                self.time = self.time - 1
+//                self.time = self.time - 1
+                self.time -= 1
                 self.slider.integerValue = self.time
                 self.showTime()
+                if self.time == 0 {
+                    self.timer?.invalidate()
+                    self.timer = nil
+                    self.startButton.title = "Start"
+                    self.slider.isEnabled = true
+                }
                 }
             } else {
                 startButton.title = "Countinue"
