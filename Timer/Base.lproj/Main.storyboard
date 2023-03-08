@@ -111,6 +111,7 @@
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Timer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <rect key="contentRect" x="1058" y="733" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1600"/>
                         <value key="minSize" type="size" width="480" height="270"/>
@@ -158,7 +159,7 @@
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bG0-Qi-tMz">
                                 <rect key="frame" x="111" y="103" width="259" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="120" doubleValue="60" tickMarkPosition="above" sliderType="linear" id="HIm-RD-xoH"/>
+                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1800" doubleValue="900" tickMarkPosition="above" sliderType="linear" id="HIm-RD-xoH"/>
                                 <connections>
                                     <action selector="sliderAction:" target="XfG-lQ-9wD" id="KJ9-OE-ilu"/>
                                 </connections>
@@ -172,6 +173,39 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="resetAction:" target="XfG-lQ-9wD" id="JwI-wp-8Gm"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rci-yX-rmA">
+                                <rect key="frame" x="105" y="222" width="55" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="10" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="G6E-rN-Ire">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="tenButton:" target="XfG-lQ-9wD" id="g9u-Gr-sKj"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbi-uU-4ng">
+                                <rect key="frame" x="320" y="222" width="57" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="30" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rJo-pK-Fff">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="thirtyButton:" target="XfG-lQ-9wD" id="xHv-JA-MJJ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xfn-6b-TrO">
+                                <rect key="frame" x="214" y="222" width="54" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="15" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lyH-IB-rnr">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="fifteenButton:" target="XfG-lQ-9wD" id="MsP-OD-V2R"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -7,6 +7,17 @@
 //
 
 import Cocoa
+import MediaPlayer
+
+class Audio {
+    static let sharedInstance = Audio()
+    var player : AVPlayer!
+    func playSound() {
+        let url = URL(fileURLWithPath: Bundle.main.path(forSoundResource: NSSound.Name("iphone_alarm.mp3"))!)
+        player = AVPlayer(url: url)
+        player.play()
+    }
+}
 
 class ViewController: NSViewController {
 
@@ -74,7 +85,8 @@ class ViewController: NSViewController {
                     self.timer = nil
                     self.startButton.title = "Start"
                     self.slider.isEnabled = true
-                }
+                    Audio.sharedInstance.playSound()
+                    }
                 }
             } else {
                 startButton.title = "Countinue"
@@ -95,6 +107,25 @@ class ViewController: NSViewController {
         timer = nil
         showTime()
     }
+    
+    @IBAction func tenButton(_ sender: Any) {
+        slider.integerValue = 600
+        time = slider.integerValue
+        showTime()
+    }
+    
+    @IBAction func fifteenButton(_ sender: Any) {
+        slider.integerValue = 900
+        time = slider.integerValue
+        showTime()
+    }
+    
+    @IBAction func thirtyButton(_ sender: Any) {
+        slider.integerValue = 1800
+        time = slider.integerValue
+        showTime()
+    }
+    
 }
 
 var saved: Int {
